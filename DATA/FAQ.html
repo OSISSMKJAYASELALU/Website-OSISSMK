@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequently Asked Questions</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+    padding-top: 70px;
+}
+
+.wrapper {
+  max-width: 75%;
+  margin: auto;
+}
+
+.wrapper > p,
+.wrapper > h1 {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.wrapper > h1 {
+  letter-spacing: 3px;
+}
+
+.accordion {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 2rem 2.5rem;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.accordion i {
+  font-size: 1.6rem;
+}
+
+.active,
+.accordion:hover {
+  background-color: #f1f7f5;
+}
+.pannel {
+  padding: 0 2rem 2.5rem 2rem;
+  background-color: white;
+  overflow: hidden;
+  background-color: #f1f7f5;
+  display: none;
+}
+.pannel p {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.faq {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+}
+.faq.active {
+  border: none;
+}
+    </style>
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://osissmkn1labuanbajo.my.canva.site/osis-landing-page">
+                <img src="..//IMAGE/logo.png" alt="Logo" height="60" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://osissmkn1labuanbajo.my.canva.site/osis-landing-page">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="TicketInfo.html">Ticket Info</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="Register.html"><span style="background-color: #52c2de; color: #ffffff; padding: 10px 20px; border-radius: 15px;">REGISTER NOW !!!</span></a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="wrapper">
+      <h1>FAQ ??</h1>
+      <h1>Frequently Asked Questions</h1><hr>
+
+      <div class="faq">
+        <button class="accordion">
+            1. Apa tujuan utama dari acara ini ?  
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Acara ini bertujuan untuk mempererat hubungan antar siswa SMA/SMK/MA di Labuan Bajo melalui kegiatan kolaboratif yang menyenangkan tapi sebenarnya bermakna.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+            2. Siapa yang dapat mengikuti acara ini ? 
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Seluruh siswa tingkat SMA/SMK/MA di Labuan Bajo diundang untuk berpartisipasi.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+            3. Apakah ada biaya untuk mengikuti acara ini ?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Ya, peserta akan dikenakan kontribusi biaya untuk tiket masuk dan konsumsi, Untuk informasi lebih lanjut silahkan cek info tiket atau <a href="TicketInfo.html" style="text-decoration: none;">klik disini.</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+            4. Di mana dan kapan acara ini akan diadakan ?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Acara akan berlangsung di Aula SMKN 1 Labuan Bajo pada Sabtu, 18 Januari 2025, sekitar pukul 18:30 WITA hingga 21:30 WITA.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+            5. Apa tema utama dari kegiatan ini ?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Tema utama adalah "Movie Night", di mana peserta akan menonton film bersama dalam suasana santai karena jenis film yang ditonton pun adalah film komedi.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+            6. Apakah ada dress code untuk acara ini ?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Ya, dress code yang direkomendasikan adalah kasual rapi. Peserta dapat mengenakan pakaian yang nyaman tetapi tetap sopan.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          7. Bagaimana cara mendaftar untuk mengikuti acara ini ?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Untuk melakukan pendaftaran silahkan cek info tiket dan registrasi melalui link ini.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          8. Film apa yang akan diputar pada "Movie Night" ini ?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Film yang akan ditonton adalah sebuah film berjudul "Home Alone 2 : Lost in New York", sebuah film klasik yang menghibur dan cocok untuk semua kalangan.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          9. Apakah ada kegiatan lain selain "Movie Night" ?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Selain menonton film, akan ada sesi interaktif seperti kuis film dan mini games untuk mempererat hubungan antarpeserta.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          10. Siapa yang dapat saya hubungi untuk informasi lebih lanjut ?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Anda dapat menghubungi panitia OSIS SMKN 1 Labuan Bajo atau OSIS SMK Stella Maris Labuan Bajo melalui kontak yang tersedia pada website ini.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          11. Apakah kegiatan ini bersifat wajib untuk siswa ?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Tidak, kegiatan ini bersifat sukarela. Namun, kami sangat mendorong partisipasi siswa untuk merasakan manfaat kolaborasi dan kebersamaan.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          12. Apakah ada batasan jumlah peserta ?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Ya, karena jumlah tiket yang tersedia adalah 100 tiket. Jumlah ini dapat berubah sesuai dengan kapasitas aula.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          13. Bagaimana jika saya memiliki alergi atau kebutuhan makanan khusus ?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Peserta dengan kebutuhan khusus dapat menginformasikan kepada panitia melalui OSIS sekolah masing-masing.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          14. Apakah ada dokumentasi selama acara berlangsung ?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Ya, panitia akan menyediakan tim dokumentasi untuk mengambil foto dan video selama acara.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          15. Apakah acara ini akan berlangsung setiap tahun ?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Kami berharap acara ini dapat menjadi kegiatan tahunan yang berkelanjutan serta dengan tema yang berbeda, tergantung pada hasil dan evaluasi acara kali ini.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          16. Apakah ada hadiah atau penghargaan selama kegiatan ini ?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Ya, peserta yang berhasil menjawab kuis singkat akan mendapatkan hadiah dari panitia.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          17. Apakah ada transportasi yang disediakan untuk menuju lokasi ?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Panitia tidak menyediakan transportasi. Peserta diharapkan datang secara mandiri atau berkoordinasi dan meminta izin dari orang tua atau wali.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          18. Apa yang perlu saya bawa saat mengikuti acara ?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Peserta disarankan membawa gambar atau bukti pembelian tiket berupa QR CODE tiket masuk, dan biaya konsumsi sesuai jenis tiket yang telah di beli.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          19. Apakah kegiatan ini akan diikuti oleh pihak luar selain siswa sekolah ?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Tidak, kegiatan ini khusus untuk siswa tingkat SMA/SMK/MA di Labuan Bajo, dengan panitia yang berasal dari OSIS SMKN 1 Labuan Bajo dan OSIS SMK Stella Maris Labuan Bajo.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+      <!-- Footer -->
+      <footer class="bg-light py-4">
+        <div class="container text-center">
+          <p>Follow us:</p>
+          <a href="https://www.instagram.com/osissmkn1labuanbajo/" class="me-3">
+              <img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" alt="Instagram" width="30">
+          </a>
+          <a href="https://youtube.com/@tjktosissmkn1labuanbajo9680?feature=shared" class="me-3">
+              <img src="https://img.icons8.com/ios-filled/50/000000/youtube-play.png" alt="YouTube" width="30">
+          </a>
+          <a href="https://www.tiktok.com/@osissmkn1labuanbajo?is_from_webapp=1&sender_device=pc">
+              <img src="https://img.icons8.com/ios-filled/50/000000/tiktok.png" alt="TikTok" width="30">
+          </a>
+      </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          this.parentElement.classList.toggle("active");
+
+          var pannel = this.nextElementSibling;
+
+          if (pannel.style.display === "block") {
+            pannel.style.display = "none";
+          } else {
+            pannel.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

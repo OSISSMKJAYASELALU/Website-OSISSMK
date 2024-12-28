@@ -1,0 +1,94 @@
+<!-- summary.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        #summary p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        #summary p strong {
+            font-weight: bold;
+        }
+
+        .qr-code {
+            text-align: center;
+            margin-top: 20px;
+        }
+        h5 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ringkasan Pemesanan Tiket</h1>
+        <h5 text-align="centers">Silahkan unduh atau screenshoot halaman ini untuk melakukan registrasi saat kegiatan nantinya.</h5><hr>
+        <div id="summary">
+            <!-- Data akan dimuat di sini -->
+        </div>
+        <div class="qr-code">
+            <h4>QR Code Pemesanan Anda</h4>
+            <canvas id="qrCodeCanvas"></canvas>
+        </div>
+    </div>
+
+    <!-- Tambahkan library QRious -->
+    <script src="https://cdn.jsdelivr.net/npm/qrious/dist/qrious.min.js"></script>
+
+    <script>
+        const userData = JSON.parse(localStorage.getItem('userData'));
+
+        if (!userData) {
+            alert('Mohon maaf, browser anda tidak kompatible dengan fitur ini, silahkan gunakan Google Chrome atau coba update browser anda, Jika ini berlanjut, Jangan khawatir data anda sudah terkirim, untuk registrasi secara manual silahkan hubungi nomor berikut +62 812-8779-9219 atau +62 813-6020-5731 🙏🙏🙏...');
+            window.location.href = 'Register.html';
+        } else {
+            document.getElementById('summary').innerHTML = `
+                <p><strong>Waktu:</strong> ${userData.time}</p>
+                <p><strong>Nama Lengkap:</strong> ${userData.fullName}</p>
+                <p><strong>Alamat Tempat Tinggal:</strong> ${userData.address}</p>
+                <p><strong>Kontak WhatsApp:</strong> ${userData.whatsapp}</p>
+                <p><strong>Asal Sekolah:</strong> ${userData.school}</p>
+                <p><strong>Jenis Tiket:</strong> ${userData.jenis_tiket}</p>
+            `;
+
+            // Gabungkan data untuk QR Code
+            const qrData = `${userData.fullName}-${userData.address}-${userData.whatsapp}-${userData.school}-${userData.jenis_tiket}`;
+            
+            // Generate QR Code
+            const qr = new QRious({
+                element: document.getElementById('qrCodeCanvas'),
+                value: qrData,
+                size: 200, // Ukuran QR Code dalam pixel
+            });
+
+            console.log('QR Code generated:', qrData);
+        }
+    </script>
+</body>
+</html>
