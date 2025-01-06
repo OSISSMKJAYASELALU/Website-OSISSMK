@@ -71,6 +71,7 @@
             document.getElementById('summary').innerHTML = `
                 <p><strong>Waktu:</strong> ${userData.time}</p>
                 <p><strong>Nama Lengkap:</strong> ${userData.fullName}</p>
+                <p><strong>Email :</strong> ${userData.email}</p>
                 <p><strong>Alamat Tempat Tinggal:</strong> ${userData.address}</p>
                 <p><strong>Kontak WhatsApp:</strong> ${userData.whatsapp}</p>
                 <p><strong>Asal Sekolah:</strong> ${userData.school}</p>
@@ -78,7 +79,7 @@
             `;
 
             // Gabungkan data untuk QR Code
-            const qrData = `${userData.fullName}-${userData.address}-${userData.whatsapp}-${userData.school}-${userData.jenis_tiket}`;
+            const qrData = `${userData.fullName}-${userData.email}-${userData.address}-${userData.whatsapp}-${userData.school}-${userData.jenis_tiket}`;
             
             // Generate QR Code
             const qr = new QRious({
@@ -89,6 +90,17 @@
 
             console.log('QR Code generated:', qrData);
         }
+
+        window.onload = function () {
+            const canvas = document.getElementById('qrCodeCanvas');
+            const dataURL = canvas.toDataURL("image/png"); // Get the data URL of the QR code
+            const link = document.createElement('a'); // Create an <a> element
+            link.href = dataURL; // Set the href to the data URL
+            link.download = 'qr-code.png'; // Set the default filename
+            document.body.appendChild(link); // Append the link to the body (temporarily)
+            link.click(); // Trigger the download
+            document.body.removeChild(link); // Remove the link from the DOM
+        };
     </script>
 </body>
 </html>
