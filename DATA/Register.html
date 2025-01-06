@@ -114,6 +114,12 @@ footer {
                     <label for="fullName" class="form-label">Nama Lengkap</label>
                     <input type="text" class="form-control" id="fullName" name="nama_lengkap" placeholder="isi nama lengkap anda" required>
                 </div>
+
+                <!-- Email -->
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email_user" placeholder="isi alamat email anda" required>
+                </div>
                 
                 <!-- Alamat -->
                 <div class="col-md-6">
@@ -135,11 +141,12 @@ footer {
                         <option value="SMKN 1 LABUAN BAJO">SMKN 1 LABUAN BAJO</option>
                         <option value="SMK STELLA MARIS LABUAN BAJO">SMK STELLA MARIS LABUAN BAJO</option>
                         <option value="SMAN 1 KOMODO">SMAN 1 KOMODO</option>
-                        <option value="SMK ST.YOSEFA">SMK ST.YOSEFA</option>
-                        <option value="SMK IGNASIUS LOYOLA">SMK IGNASIUS LOYOLA</option>
+                        <option value="SMK St. YOSEFA LABUAN BAJO">SMK St. YOSEFA LABUAN BAJO</option>
+                        <option value="SMAK ST. IGNATIUS LOYOLA">SMAK ST. IGNATIUS LOYOLA</option>
                         <option value="MAN MANGGARAI BARAT">MAN MANGGARAI BARAT</option>
                         <option value="SMKN 3 KOMODO">SMKN 3 KOMODO</option>
                         <option value="SLH LABUAN BAJO">SLH LABUAN BAJO</option>
+                        <option value="Lainnya">Lainnya</option>
                     </select>
                 </div>
                 
@@ -222,6 +229,7 @@ footer {
         // Ambil data form untuk disimpan ke localStorage
         const userData = {
             fullName: document.getElementById('fullName').value,
+            email: document.getElementById('email').value,
             address: document.getElementById('address').value,
             whatsapp: document.getElementById('whatsapp').value,
             school: document.getElementById('school').value,
@@ -246,7 +254,7 @@ footer {
                 // Arahkan ke halaman summary.html
                 setTimeout(() => {
                     window.location.href = 'summary.html';
-                }, 2000); // Tunggu 2 detik untuk memberikan waktu user membaca alert
+                }, 5000); // Tunggu 5 detik untuk memberikan waktu user membaca alert
             })
             .catch((error) => console.error('Error!', error.message))
             .finally(() => {
