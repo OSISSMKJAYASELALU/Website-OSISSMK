@@ -23,27 +23,8 @@
             padding: 30px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        .ticket-cards {
-            justify-content: center;
-        }
         .card input[type="radio"] {
             display: none;
-        }
-        .card {
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            background-color: #f8d7d7;
-        }
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-        }
-        .card.selected {
-            border: 2px solid #c91717;
-            background-color: #f8d7d7;
-        }
-        .link-style {
-            text-decoration: none; 
         }
         .navbar.fixed-top {
         position: fixed !important;
@@ -104,88 +85,7 @@ footer {
     <div class="container py-5 d-flex justify-content-center">
         <div class="form-card">
             <h2 class="text-center fw-bold">REGISTER FORM</h2> 
-            <h6 class="text-center" style="color: gray; font-style: italic;">Silahkan lengkapi data di bawah ini sebelum membeli tiket. Pastikan data yang anda masukan sudah sesuai</h6>
-
-            <hr>
-            <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
-                <strong>Terimakasih, Pesan Anda Sudah Kami Terima !!!</strong> <br>Silahkan tunggu beberapa saat untuk menerima ticket anda.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            <form class="row g-3" id="userForm" name="zls-ticket-database">
-                <!-- Nama Lengkap -->
-                <div class="col-md-6">
-                    <label for="fullName" class="form-label">Nama Lengkap</label>
-                    <input type="text" class="form-control" id="fullName" name="nama_lengkap" placeholder="isi nama lengkap anda" required>
-                </div>
-
-                <!-- Email -->
-                <div class="col-md-6">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" name="email_user" placeholder="isi alamat email anda" required>
-                </div>
-                
-                <!-- Alamat -->
-                <div class="col-md-6">
-                    <label for="address" class="form-label">Alamat</label>
-                    <input type="text" class="form-control" id="address" name="alamat_tempat_tinggal" placeholder="isi alamat rumah anda" required>
-                </div>
-                
-                <!-- Kontak Handphone -->
-                <div class="col-md-6">
-                    <label for="whatsapp" class="form-label">Kontak Handphone</label>
-                    <input type="number" class="form-control" id="whatsapp" name="kontak_whatsapp" placeholder="isi kontak whatsapp anda" required>
-                </div>
-                
-                <!-- Asal Sekolah -->
-                <div class="col-md-6">
-                    <label for="school" class="form-label">Asal Sekolah</label>
-                    <select class="form-select" id="school" name="asal_sekolah" required>
-                        <option value="" disabled selected>Pilih Asal Sekolah</option>
-                        <option value="SMKN 1 LABUAN BAJO">SMKN 1 LABUAN BAJO</option>
-                        <option value="SMK STELLA MARIS LABUAN BAJO">SMK STELLA MARIS LABUAN BAJO</option>
-                        <option value="SMAN 1 KOMODO">SMAN 1 KOMODO</option>
-                        <option value="SMK St. YOSEFA LABUAN BAJO">SMK St. YOSEFA LABUAN BAJO</option>
-                        <option value="SMAK ST. IGNATIUS LOYOLA">SMAK ST. IGNATIUS LOYOLA</option>
-                        <option value="MAN MANGGARAI BARAT">MAN MANGGARAI BARAT</option>
-                        <option value="SMKN 3 KOMODO">SMKN 3 KOMODO</option>
-                        <option value="SLH LABUAN BAJO">SLH LABUAN BAJO</option>
-                        <option value="Lainnya">Lainnya</option>
-                    </select>
-                </div>
-                
-                <!-- Jenis Tiket -->
-                <div class="col-md-12 text-center">
-                    <label class="form-label">Jenis Tiket <br> <a href="TicketInfo.html" id="TicketInfo" class="link-style">Info Ticket Selengkapnya</a></label>
-                    <div class="d-flex flex-wrap gap-3 ticket-cards">
-                        <!-- Tiket 10K -->
-                        <div class="card" style="width: 18rem;">
-                            <img src="../IMAGE/10K.png" class="card-img-top" alt="Tiket 10K">
-                            <div class="card-body">
-                                <h5 class="card-title">Tiket 10K</h5>
-                                <p class="card-text">Paket Nonton Ditemani Pop Corn Dan Air Mineral.</p>
-                                <input type="radio" id="tiket-10k" name="jenis_tiket" value="10K" required>
-                            </div>
-                        </div>
-                        <!-- Tiket 20K -->
-                        <div class="card" style="width: 18rem;">
-                            <img src="../IMAGE/20K.png" class="card-img-top" alt="Tiket 20K">
-                            <div class="card-body">
-                                <h5 class="card-title">Tiket 20K</h5>
-                                <p class="card-text">Paket Nonton Ditemani Pop Corn, Air Mineral Plus Dapat Nasi Padang.</p>
-                                <input type="radio" id="tiket-20k" name="jenis_tiket" value="20K" required>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Submit Button -->
-                <button type="submit" id="submitBtn" class="btn btn-primary btn-kirim">Kirim</button>
-
-                <button class="btn btn-primary btn-loading d-none" type="button" disabled>
-                    <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
-                    <span role="status">Loading...</span>
-                </button>
-            </form>
+            <h6 class="text-center" style="color: gray; font-style: italic;">Fitur ini sudah tida aktif lagi, terimasih atas partisipasi anda 😁</h6>
         </div>
     </div>
 
@@ -204,68 +104,5 @@ footer {
                 </a>
             </div>
         </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-    <script>
-        document.querySelectorAll('.card').forEach(card => {
-            card.addEventListener('click', () => {
-                document.querySelectorAll('.card').forEach(c => c.classList.remove('selected'));
-                card.classList.add('selected');
-                card.querySelector('input[type="radio"]').checked = true;
-            });
-        });
-
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzu9CiC3G4w9VXTjLIBernxsuHiCtEFLZdV24Mk8SR3hoZriH-EzZPwqmhRWnqRGVOb/exec';
-    const form = document.forms['zls-ticket-database'];
-    const btnKirim = document.querySelector('.btn-kirim');
-    const btnLoading = document.querySelector('.btn-loading');
-    const myAlert = document.querySelector('.my-alert');
-
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        // Tampilkan tombol loading dan sembunyikan tombol kirim
-        btnLoading.classList.remove('d-none');
-        btnKirim.classList.add('d-none');
-
-        // Ambil data form untuk disimpan ke localStorage
-        const userData = {
-            fullName: document.getElementById('fullName').value,
-            email: document.getElementById('email').value,
-            address: document.getElementById('address').value,
-            whatsapp: document.getElementById('whatsapp').value,
-            school: document.getElementById('school').value,
-            jenis_tiket: document.querySelector('input[name="jenis_tiket"]:checked').value,
-            time: new Date().toLocaleString(),
-        };
-
-        // Kirim data ke Google Sheet
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-            .then((response) => {
-                console.log('Success!', response);
-
-                // Tampilkan alert sukses
-                myAlert.classList.remove('d-none');
-
-                // Simpan data ke localStorage
-                localStorage.setItem('userData', JSON.stringify(userData));
-
-                // Reset form
-                form.reset();
-
-                // Arahkan ke halaman summary.html
-                setTimeout(() => {
-                    window.location.href = 'summary.html';
-                }, 5000); // Tunggu 5 detik untuk memberikan waktu user membaca alert
-            })
-            .catch((error) => console.error('Error!', error.message))
-            .finally(() => {
-                // Sembunyikan tombol loading dan tampilkan tombol kirim
-                btnLoading.classList.add('d-none');
-                btnKirim.classList.remove('d-none');
-            });
-       });
-    </script>
 </body>
 </html>
