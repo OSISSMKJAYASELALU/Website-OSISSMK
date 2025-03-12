@@ -6,15 +6,21 @@
     <title>Register Form</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
+        html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden; /* Mencegah geser ke kanan */
+        }
+
         body {
             background: url('../IMAGE/BG1.PNG') no-repeat center center fixed;
             background-size: cover;
             backdrop-filter: blur(10px);
             padding-top: 56px;
-            height: 100%;  /* Memastikan body memiliki tinggi penuh */
-            margin: 0;  /* Menghilangkan margin default */
-            display: flex;
-            flex-direction: column;  /* Mengatur elemen menjadi kolom */
+            flex-grow: 1; /* Memungkinkan konten utama mengambil seluruh ruang yang tersedia */
         }
         .form-card {
             backdrop-filter: blur(15px);
@@ -23,28 +29,16 @@
             padding: 30px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        .card input[type="radio"] {
-            display: none;
-        }
-        .navbar.fixed-top {
-        position: fixed !important;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1050; /* atau lebih tinggi jika perlu */
+        main {
+            flex-grow: 1; /* Membantu mendorong footer ke bawah */
         }
 
-
-footer {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
-    /* Tambahkan styling lain sesuai kebutuhan */
-}
-
-
-
-
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            width: 100%; /* Pastikan footer mengambil seluruh lebar halaman */
+        }
     </style>
 </head>
 <body>
@@ -73,36 +67,44 @@ footer {
                             <a class="nav-link" href="TicketInfo.html">Ticket Info</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="https://drive.google.com/drive/folders/1zrlVHYgIJqlXSLV75emdGFJB_xXHHdik?usp=drive_link"><span style="background-color: #f34646; color: #ffffff; padding: 10px 20px; border-radius: 15px;">Tutorial Registrasi</span></a>
-                      </li>
+                            <a class="nav-link" href="https://drive.google.com/drive/folders/1zrlVHYgIJqlXSLV75emdGFJB_xXHHdik?usp=drive_link">
+                                <span style="background-color: #f34646; color: #ffffff; padding: 10px 20px; border-radius: 15px;">
+                                    Tutorial Registrasi
+                                </span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Form Section -->
-    <div class="container py-5 d-flex justify-content-center">
-        <div class="form-card">
-            <h2 class="text-center fw-bold">REGISTER FORM</h2> 
-            <h6 class="text-center" style="color: gray; font-style: italic;">Fitur ini sudah tida aktif lagi, terimasih atas partisipasi anda 😁</h6>
-        </div>
-    </div>
-
-        <!-- Footer -->
-        <footer class="bg-light py-4">
-            <div class="container text-center">
-                <p>Follow us:</p>
-                <a href="https://www.instagram.com/osissmkn1labuanbajo/" class="me-3">
-                    <img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" alt="Instagram" width="30">
-                </a>
-                <a href="https://youtube.com/@tjktosissmkn1labuanbajo9680?feature=shared" class="me-3">
-                    <img src="https://img.icons8.com/ios-filled/50/000000/youtube-play.png" alt="YouTube" width="30">
-                </a>
-                <a href="https://www.tiktok.com/@osissmkn1labuanbajo?is_from_webapp=1&sender_device=pc">
-                    <img src="https://img.icons8.com/ios-filled/50/000000/tiktok.png" alt="TikTok" width="30">
-                </a>
+    <!-- Konten utama -->
+    <main>
+        <div class="container py-5 d-flex justify-content-center">
+            <div class="form-card">
+                <h2 class="text-center fw-bold">REGISTER FORM</h2> 
+                <h6 class="text-center" style="color: gray; font-style: italic;">
+                    Fitur ini sudah tidak aktif lagi, terima kasih atas partisipasi anda 😁
+                </h6>
             </div>
-        </footer>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-light py-4">
+        <div class="container text-center">
+            <p>Follow us:</p>
+            <a href="https://www.instagram.com/osissmkn1labuanbajo/" class="me-3">
+                <img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" alt="Instagram" width="30">
+            </a>
+            <a href="https://youtube.com/@tjktosissmkn1labuanbajo9680?feature=shared" class="me-3">
+                <img src="https://img.icons8.com/ios-filled/50/000000/youtube-play.png" alt="YouTube" width="30">
+            </a>
+            <a href="https://www.tiktok.com/@osissmkn1labuanbajo?is_from_webapp=1&sender_device=pc">
+                <img src="https://img.icons8.com/ios-filled/50/000000/tiktok.png" alt="TikTok" width="30">
+            </a>
+        </div>
+    </footer>
 </body>
 </html>
